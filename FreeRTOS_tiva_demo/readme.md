@@ -5,12 +5,11 @@ This firmware package is intended to provide a starting point for creating a Fre
 ## Required Components ##
 * Code Composer Studio (v9.1 used for this project)
 * [TM4C1294 Connected Launchpad](http://www.ti.com/tool/ek-tm4c1294xl)
-* [Artistic Style](http://astyle.sourceforge.net/astyle.html) (optional for formatted code)
+* FreeRTOS Kernel
+
 
 ## Expected Output ##
-* Code will build with no errors or warnings
-* Green LEDs D1 - D4 will blink in sequence 1 per second
-* Serial port via Stellaris Virtual Serial Port will output "Hello, world from FreeRTOS 9.0!"
+There are two task each of them is supposed to be blink a user LED(on board) and button interrupt is activated .If any button press is detected IRQ handler notify task1 and task1 deletes itself.Similarly if a second button press is occured then task2 is deleted.
 
 ## Notes ##
 This software is provided as-is!
